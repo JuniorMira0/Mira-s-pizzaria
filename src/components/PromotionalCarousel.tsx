@@ -46,7 +46,7 @@ const PromotionalCarousel = () => {
 
   return (
     <Carousel
-      className="w-full h-[60vh] md:h-[75vh]"
+      className="w-full h-[65vh] md:h-[55vh]"
       opts={{
         align: 'start',
         loop: true,
