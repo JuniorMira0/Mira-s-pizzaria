@@ -13,32 +13,32 @@ const PromotionalCarousel = () => {
     {
       id: 1,
       title: 'Promo 1',
-      imageDesktop: '/images/Banner1.png',
-      imageMobile: '/images/Banner1-mobile.png',
+      imageDesktop: '/images/Banner1.webp',
+      imageMobile: '/images/Banner1-mobile.webp',
     },
     {
       id: 2,
       title: 'Promo 2',
-      imageDesktop: '/images/Banner5.png',
-      imageMobile: '/images/Banner5-mobile.png',
+      imageDesktop: '/images/Banner5.webp',
+      imageMobile: '/images/Banner5-mobile.webp',
     },
     {
       id: 3,
       title: 'Promo 3',
-      imageDesktop: '/images/Banner3.png',
-      imageMobile: '/images/Banner3-mobile.png',
+      imageDesktop: '/images/Banner3.webp',
+      imageMobile: '/images/Banner3-mobile.webp',
     },
     {
       id: 4,
       title: 'Promo 4',
-      imageDesktop: '/images/Banner4.png',
-      imageMobile: '/images/Banner4-mobile.png',
+      imageDesktop: '/images/Banner4.webp',
+      imageMobile: '/images/Banner4-mobile.webp',
     },
     {
       id: 5,
       title: 'Promo 5',
-      imageDesktop: '/images/Banner2.png',
-      imageMobile: '/images/Banner2-mobile.png',
+      imageDesktop: '/images/Banner2.webp',
+      imageMobile: '/images/Banner2-mobile.webp',
     },
   ];
 
