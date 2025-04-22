@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import PromotionalCarousel from '@/components/PromotionalCarousel';
 import MenuSection from '@/components/MenuSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
 import LocationMap from '@/components/LocationMap';
 
 const Index = () => {
@@ -9,7 +10,7 @@ const Index = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative h-screen md:h-[95vh]">
+      <section className="relative md:h-[95vh] mt-20 md:mt-0">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gray-50" />
         </div>
@@ -24,6 +25,9 @@ const Index = () => {
 
       {/* Menu Section */}
       <MenuSection />
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
 
       {/* Location Section */}
       <section className="bg-white py-16">

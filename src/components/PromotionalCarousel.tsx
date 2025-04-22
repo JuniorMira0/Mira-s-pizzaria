@@ -1,5 +1,5 @@
-import React from 'react'; // Import React for useRef
-import Autoplay from 'embla-carousel-autoplay'; // Import the Autoplay plugin
+import React from 'react';
+import Autoplay from 'embla-carousel-autoplay';
 import {
   Carousel,
   CarouselContent,
@@ -13,33 +13,36 @@ const PromotionalCarousel = () => {
     {
       id: 1,
       title: 'Promo 1',
-      image: '/images/Banner1.png',
+      imageDesktop: '/images/Banner1.png',
+      imageMobile: '/images/Banner1-mobile.png', // Use a imagem mobile
     },
     {
       id: 2,
       title: 'Promo 2',
-      image: '/images/Banner5.png',
+      imageDesktop: '/images/Banner5.png',
+      imageMobile: '/images/Banner5-mobile.png', // Use a imagem mobile
     },
     {
       id: 3,
       title: 'Promo 3',
-      image: '/images/Banner3.png',
+      imageDesktop: '/images/Banner3.png',
+      imageMobile: '/images/Banner3-mobile.png', // Use a imagem mobile
     },
     {
       id: 4,
       title: 'Promo 4',
-      image: '/images/Banner4.png',
+      imageDesktop: '/images/Banner4.png',
+      imageMobile: '/images/Banner4-mobile.png', // Use a imagem mobile
     },
     {
       id: 5,
       title: 'Promo 5',
-      image: '/images/Banner2.png',
+      imageDesktop: '/images/Banner2.png',
+      imageMobile: '/images/Banner2-mobile.png', // Use a imagem mobile
     },
   ];
 
-  const plugin = React.useRef(
-    Autoplay({ delay: 10000, stopOnInteraction: true }),
-  );
+  const plugin = React.useRef(Autoplay({ delay: 5000 }));
 
   return (
     <Carousel
@@ -49,16 +52,22 @@ const PromotionalCarousel = () => {
         loop: true,
       }}
       plugins={[plugin.current]}
-      onMouseEnter={plugin.current.stop}
-      onMouseLeave={plugin.current.reset}
     >
       <CarouselContent className="h-full">
         {promotions.map((promo) => (
-          <CarouselItem key={promo.id} className="h-full p-0 basis-full">
+          <CarouselItem
+            key={promo.id}
+            className="h-full p-0 basis-full overflow-hidden"
+          >
             <img
-              src={promo.image}
+              src={promo.imageDesktop}
               alt={promo.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover hidden md:block"
+            />
+            <img
+              src={promo.imageMobile}
+              alt={promo.title}
+              className="w-full h-full object-cover block md:hidden"
             />
           </CarouselItem>
         ))}
