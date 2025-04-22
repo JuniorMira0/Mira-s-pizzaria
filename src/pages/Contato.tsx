@@ -9,10 +9,10 @@ import {
 const Contato = () => {
   const phoneNumber = '4130144656';
   const whatsappDisplayNumber = '41 3014-4656';
-  const whatsappRawNumber = '554130144656'; // VERIFIQUE ESTE NÚMERO
+  const whatsappRawNumber = '554130144656';
   const address = 'Joao Alencar Guimaraes 791, Santa Quiteria, Curitiba - PR';
   const googleMapsEmbedUrl =
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.182554101645!2d-49.31804488498586!3d-25.43220198378731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce3c74a974f9b%3A0x497819dcf83967f7!2sR.%20Jo%C3%A3o%20Alencar%20Guimar%C3%A3es%2C%20791%20-%20Santa%20Quit%C3%A9ria%2C%20Curitiba%20-%20PR%2C%2080310-420!5e0!3m2!1spt-BR!2sbr!4v1678886400000!5m2!1spt-BR!2sbr'; // SUBSTITUA PELO SEU LINK DE EMBED AQUI
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.182554101645!2d-49.31804488498586!3d-25.43220198378731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce3c74a974f9b%3A0x497819dcf83967f7!2sR.%20Jo%C3%A3o%20Alencar%20Guimar%C3%A3es%2C%20791%20-%20Santa%20Quit%C3%A9ria%2C%20Curitiba%20-%20PR%2C%2080310-420!5e0!3m2!1spt-BR!2sbr!4v1678886400000!5m2!1spt-BR!2sbr';
   const googleMapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
     address,
   )}`;

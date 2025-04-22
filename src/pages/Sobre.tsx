@@ -27,7 +27,7 @@ const Sobre = () => {
                 Nossa Paixão por Pizza
               </h2>
               <p className="text-lg text-gray-700 mb-4">
-                Bem-vindo à Mira's Pizzaria! Desde [Ano de Fundação], somos
+                Bem-vindo à Mira's Pizzaria! Desde 2022, somos
                 dedicados a oferecer as melhores pizzas da região, combinando
                 receitas tradicionais com um toque de criatividade.
               </p>

@@ -57,7 +57,7 @@ const MenuSection = () => {
                   key={item.id}
                   className="md:basis-1/2 lg:basis-1/3"
                 >
-                  <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full">
+                  <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
                     <div className="aspect-video relative overflow-hidden">
                       <img
                         src={item.image}
@@ -65,7 +65,7 @@ const MenuSection = () => {
                         className="object-cover w-full h-full hover:scale-110 transition-transform duration-300"
                       />
                     </div>
-                    <CardContent className="p-6 flex flex-col h-full">
+                    <CardContent className="p-6 flex flex-col flex-grow">
                       <h3 className="text-xl font-bold mb-2">{item.name}</h3>
                       <p className="text-gray-600 mb-4 flex-grow">
                         {item.description}

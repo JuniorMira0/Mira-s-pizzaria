@@ -14,31 +14,31 @@ const PromotionalCarousel = () => {
       id: 1,
       title: 'Promo 1',
       imageDesktop: '/images/Banner1.png',
-      imageMobile: '/images/Banner1-mobile.png', // Use a imagem mobile
+      imageMobile: '/images/Banner1-mobile.png',
     },
     {
       id: 2,
       title: 'Promo 2',
       imageDesktop: '/images/Banner5.png',
-      imageMobile: '/images/Banner5-mobile.png', // Use a imagem mobile
+      imageMobile: '/images/Banner5-mobile.png',
     },
     {
       id: 3,
       title: 'Promo 3',
       imageDesktop: '/images/Banner3.png',
-      imageMobile: '/images/Banner3-mobile.png', // Use a imagem mobile
+      imageMobile: '/images/Banner3-mobile.png',
     },
     {
       id: 4,
       title: 'Promo 4',
       imageDesktop: '/images/Banner4.png',
-      imageMobile: '/images/Banner4-mobile.png', // Use a imagem mobile
+      imageMobile: '/images/Banner4-mobile.png',
     },
     {
       id: 5,
       title: 'Promo 5',
       imageDesktop: '/images/Banner2.png',
-      imageMobile: '/images/Banner2-mobile.png', // Use a imagem mobile
+      imageMobile: '/images/Banner2-mobile.png',
     },
   ];
 
@@ -46,7 +46,7 @@ const PromotionalCarousel = () => {
 
   return (
     <Carousel
-      className="w-full h-full"
+      className="w-full h-[60vh] md:h-[75vh]"
       opts={{
         align: 'start',
         loop: true,
