@@ -75,6 +75,15 @@ const Navbar = () => {
             SOBRE
           </Link>
           <a
+            href="https://wa.me/554130144656"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={linkClasses}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            WHATSAPP
+          </a>
+          <a
             href="https://www.instagram.com/miraspizzaria/"
             target="_blank"
             rel="noopener noreferrer"
@@ -91,15 +100,6 @@ const Navbar = () => {
             {' '}
             DELIVERY
           </Link>
-          <a
-            href="https://wa.me/554130144656"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={linkClasses}
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            WHATSAPP
-          </a>
           <Link
             to="/contato"
             className={linkClasses}
