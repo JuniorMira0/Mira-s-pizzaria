@@ -18,14 +18,14 @@ const MenuSection = () => {
       description:
         'Delicioso molho de tomate, mussarela, tomates em rodelas, manjericão fresco e oregano',
       price: 'R$ 45,00',
-      image: '/images/pizza-margherita.png',
+      image: '/images/pizza-margherita.webp',
     },
     {
       id: 2,
       name: 'Pizza Pepperoni',
       description: 'Delicioso molho de tomate, mussarela, pepperone e orégano',
       price: 'R$ 48,00',
-      image: '/images/pizza-pepperoni.png',
+      image: '/images/pizza-pepperoni.webp',
     },
     {
       id: 3,
@@ -33,7 +33,7 @@ const MenuSection = () => {
       description:
         'Delicioso molho de tomate, mussarela, requeijão cremoso, provolone, gorgonzola e orégano',
       price: 'R$ 48,00',
-      image: '/images/pizza-4-queijos.png',
+      image: '/images/pizza-4-queijos.webp',
     },
     {
       id: 4,
@@ -41,7 +41,7 @@ const MenuSection = () => {
       description:
         'Delicioso molho de tomate, mussarela, presunto, ovos, cebola azeitona e orégano',
       price: 'R$ 45,00',
-      image: '/images/pizza-portuguesa.png',
+      image: '/images/pizza-portuguesa.webp',
     },
   ];
 

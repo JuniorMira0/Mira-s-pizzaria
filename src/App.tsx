@@ -1,13 +1,15 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
-import Sobre from "./pages/Sobre";
-import Contato from "./pages/Contato";
-import Delivery from "./pages/Delivery";
+import React, { lazy, Suspense } from 'react';
+import { Toaster } from '@/components/ui/toaster';
+import { Toaster as Sonner } from '@/components/ui/sonner';
+import { TooltipProvider } from '@/components/ui/tooltip';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+const IndexPage = lazy(() => import('./pages/Index'));
+const SobrePage = lazy(() => import('./pages/Sobre'));
+const ContatoPage = lazy(() => import('./pages/Contato'));
+const DeliveryPage = lazy(() => import('./pages/Delivery'));
+const NotFoundPage = lazy(() => import('./pages/NotFound'));
 
 const queryClient = new QueryClient();
 
@@ -17,13 +19,21 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/sobre" element={<Sobre />} />
-          <Route path="/contato" element={<Contato />} />
-          <Route path="/delivery" element={<Delivery />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense
+          fallback={
+            <div className="flex justify-center items-center h-screen">
+              Carregando...
+            </div>
+          }
+        >
+          <Routes>
+            <Route path="/" element={<IndexPage />} />
+            <Route path="/sobre" element={<SobrePage />} />
+            <Route path="/contato" element={<ContatoPage />} />
+            <Route path="/delivery" element={<DeliveryPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

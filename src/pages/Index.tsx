@@ -17,6 +17,13 @@ const Index = () => {
           content="Peça as melhores pizzas artesanais de Curitiba (Santa Quitéria) com ingredientes frescos! Delivery rápido. Consulte nosso cardápio e peça já!"
         />
         <link rel="canonical" href="https://miraspizzaria.com.br/" />
+        <link
+          rel="preload"
+          fetchPriority="high"
+          as="image"
+          href="/public/images/Banner1.webp"
+          type="image/webp"
+        />
       </Helmet>
 
       <div className="min-h-screen">
