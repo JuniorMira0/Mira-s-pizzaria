@@ -21,7 +21,7 @@ const Index = () => {
           rel="preload"
           fetchPriority="high"
           as="image"
-          href="/public/images/Banner1.webp"
+          href="/images/Banner1.webp"
           type="image/webp"
         />
         <link
@@ -35,7 +35,7 @@ const Index = () => {
           rel="preload"
           fetchPriority="high"
           as="image"
-          href="/public/images/pizza-margherita.webp"
+          href="/images/pizza-margherita.webp"
           type="image/webp"
         />
       </Helmet>
@@ -70,6 +70,7 @@ const Index = () => {
               <p className="text-xl">
                 Endereço: Joao alencar guimarães 791 - Santa quiteria
               </p>
+              <p>Miras Pizzaria LTDA - 13.650.975/0001-07 </p>
             </div>
           </div>
         </section>
