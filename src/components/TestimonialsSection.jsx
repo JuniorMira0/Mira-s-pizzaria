@@ -33,7 +33,6 @@ const testimonials = [
   },
 ];
 
-// Componente simples para estrelas (exemplo)
 const StarRating = ({ rating }) => (
   <div className="flex">
     {[...Array(5)].map((_, i) => (
@@ -55,7 +54,6 @@ const TestimonialsSection = () => {
   return (
     <section className="py-16 bg-gray-50">
       {' '}
-      {/* Cor de fundo pode variar */}
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">
           O que nossos clientes dizem
@@ -64,13 +62,11 @@ const TestimonialsSection = () => {
         {isMobile ? (
           <Carousel className="w-full max-w-xs sm:max-w-sm mx-auto">
             {' '}
-            {/* Ajuste max-w */}
             <CarouselContent>
               {testimonials.map((item) => (
                 <CarouselItem key={item.id}>
                   <Card className="text-center h-full">
                     <CardContent className="p-6 flex flex-col items-center justify-center">
-                      {/* <img src={item.photo} alt={item.customerName} className="w-16 h-16 rounded-full mb-4" /> */}
                       <p className="text-gray-600 italic mb-4">
                         "{item.comment}"
                       </p>
@@ -84,16 +80,13 @@ const TestimonialsSection = () => {
               ))}
             </CarouselContent>
             <CarouselPrevious className="absolute left-[-50px] top-1/2 -translate-y-1/2" />{' '}
-            {/* Ajuste posição */}
             <CarouselNext className="absolute right-[-50px] top-1/2 -translate-y-1/2" />{' '}
-            {/* Ajuste posição */}
           </Carousel>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((item) => (
               <Card key={item.id} className="text-center">
                 <CardContent className="p-6 flex flex-col items-center justify-center">
-                  {/* <img src={item.photo} alt={item.customerName} className="w-16 h-16 rounded-full mb-4" /> */}
                   <p className="text-gray-600 italic mb-4">"{item.comment}"</p>
                   <StarRating rating={item.rating} />
                   <h3 className="text-lg font-semibold mt-3">

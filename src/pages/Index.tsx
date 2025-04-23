@@ -24,6 +24,20 @@ const Index = () => {
           href="/public/images/Banner1.webp"
           type="image/webp"
         />
+        <link
+          rel="preload"
+          fetchPriority="high"
+          as="image"
+          href="/images/Banner1-mobile.webp"
+          type="image/webp"
+        />
+        <link
+          rel="preload"
+          fetchPriority="high"
+          as="image"
+          href="/public/images/pizza-margherita.webp"
+          type="image/webp"
+        />
       </Helmet>
 
       <div className="min-h-screen">
