@@ -12,16 +12,16 @@ import { useIsMobile } from '@/hooks/use-mobile';
 const testimonials = [
   {
     id: 1,
-    customerName: 'Ana Silva',
+    customerName: 'jheniffer',
     comment:
-      'A melhor pizza Margherita que já comi! Massa perfeita e ingredientes frescos.',
+      'pizza extremamente saborosa!!.',
     rating: 5,
   },
   {
     id: 2,
-    customerName: 'Carlos Souza',
+    customerName: 'mário',
     comment:
-      'Entrega rápida e a pizza de Pepperoni estava deliciosa. Recomendo!',
+      'Entrega rápida, embalagem excelente ( nunca vi)....tudo bom , muito aprovado.',
     rating: 5,
   },
   {
