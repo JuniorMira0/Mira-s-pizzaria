@@ -1,4 +1,3 @@
-import Navbar from '@/components/Navbar';
 import {
   FaPhoneAlt,
   FaWhatsapp,
@@ -30,7 +29,6 @@ const Contato = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
-        <Navbar />
         <div className="pt-24 pb-16 px-6">
           <div className="max-w-7xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center text-red-700">

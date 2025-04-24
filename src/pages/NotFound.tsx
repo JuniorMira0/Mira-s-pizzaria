@@ -1,6 +1,4 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from '@/components/Navbar';
 import { Helmet } from 'react-helmet-async';
 
 const NotFound = () => {
@@ -16,7 +14,6 @@ const NotFound = () => {
       </Helmet>
 
       <div className="min-h-screen">
-        <Navbar />
         <div className="flex items-center justify-center min-h-screen bg-gray-100 pt-20">
           <div className="text-center p-6">
             <h1 className="text-6xl md:text-9xl font-bold text-red-600 mb-4">

@@ -1,4 +1,3 @@
-import Navbar from '@/components/Navbar';
 import { FaWhatsapp, FaPhoneAlt, FaLaptop } from 'react-icons/fa';
 import { Helmet } from 'react-helmet-async';
 
@@ -20,7 +19,6 @@ const Delivery = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
-        <Navbar />
         <div className="pt-24 pb-16 px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-red-700">

@@ -1,4 +1,3 @@
-import Navbar from '@/components/Navbar';
 import { Helmet } from 'react-helmet-async';
 
 const Sobre = () => {
@@ -16,7 +15,6 @@ const Sobre = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
-        <Navbar />
         <div className="relative h-64 md:h-96 w-full">
           <img
             src="/images/pizzaria-interior.jpg"
@@ -50,7 +48,7 @@ const Sobre = () => {
               </div>
               <div>
                 <img
-                  src="/images/pizza-margherita.png"
+                  src="/images/pizza-margherita.webp"
                   alt="Pizza Margherita deliciosa da Mira's"
                   className="rounded-lg shadow-lg w-full max-h-80 object-cover h-auto"
                 />

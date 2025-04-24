@@ -47,10 +47,18 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <nav className={navbarClasses}>
       <div className="max-w-7xl mx-auto flex items-center justify-between flex-wrap">
-        <Link to="/" className="text-5xl font-huglove text-black">
+        <Link
+          to="/"
+          onClick={scrollToTop}
+          className="text-5xl font-huglove text-black"
+        >
           <span>Mira</span>
           <span className="text-[#ea1d2c]">'</span>
           <span>s.</span>
@@ -69,7 +77,10 @@ const Navbar = () => {
           <Link
             to="/sobre"
             className={linkClasses}
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={() => {
+              setIsMobileMenuOpen(false);
+              scrollToTop();
+            }}
           >
             {' '}
             SOBRE
@@ -88,14 +99,20 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             className={linkClasses}
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={() => {
+              setIsMobileMenuOpen(false);
+              scrollToTop();
+            }}
           >
             INSTAGRAM
           </a>
           <Link
             to="/delivery"
             className={linkClasses}
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={() => {
+              setIsMobileMenuOpen(false);
+              scrollToTop();
+            }}
           >
             {' '}
             DELIVERY
@@ -103,7 +120,10 @@ const Navbar = () => {
           <Link
             to="/contato"
             className={linkClasses}
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={() => {
+              setIsMobileMenuOpen(false);
+              scrollToTop();
+            }}
           >
             {' '}
             CONTATO

@@ -1,4 +1,3 @@
-import Navbar from '@/components/Navbar';
 import PromotionalCarousel from '@/components/PromotionalCarousel';
 import MenuSection from '@/components/MenuSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
@@ -40,40 +39,34 @@ const Index = () => {
         />
       </Helmet>
 
-      <div className="min-h-screen">
-        <Navbar />
-
-        <section className="relative md:h-[95vh] mt-20 md:mt-0">
-          <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-gray-50" />
-          </div>
-          <div className="relative z-10 h-full w-full flex flex-col items-center justify-center text-white">
-            <div className="w-full md:w-4/5 lg:w-3/4">
-              <PromotionalCarousel />
+      <div className="flex flex-col min-h-screen">
+        <main className="flex-grow">
+          <section className="relative md:h-[95vh] mt-20 md:mt-0">
+            <div className="absolute inset-0">
+              <div className="absolute inset-0 bg-gray-50" />
             </div>
-          </div>
-        </section>
-
-        <MenuSection />
-
-        <TestimonialsSection />
-
-        <section className="bg-white py-16">
-          <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-12">
-              Nossa Localização
-            </h2>
-            <div className="rounded-lg overflow-hidden shadow-xl">
-              <LocationMap />
+            <div className="relative z-10 h-full w-full flex flex-col items-center justify-center text-white">
+              <div className="w-full md:w-4/5 lg:w-3/4">
+                <PromotionalCarousel />
+              </div>
             </div>
-            <div className="text-center mt-8">
-              <p className="text-xl">
-                Endereço: Joao alencar guimarães 791 - Santa quiteria
-              </p>
-              <p>Miras Pizzaria LTDA - 13.650.975/0001-07 </p>
+          </section>
+
+          <MenuSection />
+
+          <TestimonialsSection />
+
+          <section className="bg-white pt-16 pb-8">
+            <div className="max-w-7xl mx-auto px-4">
+              <h2 className="text-4xl font-bold text-center mb-12">
+                Nossa Localização
+              </h2>
+              <div className="rounded-lg overflow-hidden shadow-xl">
+                <LocationMap />
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </main>
       </div>
     </>
   );
