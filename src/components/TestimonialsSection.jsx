@@ -13,8 +13,7 @@ const testimonials = [
   {
     id: 1,
     customerName: 'jheniffer',
-    comment:
-      'pizza extremamente saborosa!!.',
+    comment: 'pizza extremamente saborosa!!.',
     rating: 5,
   },
   {
@@ -26,10 +25,28 @@ const testimonials = [
   },
   {
     id: 3,
-    customerName: 'Mariana Lima',
+    customerName: 'Karina',
     comment:
-      'Adorei a 4 Queijos, muito saborosa e com bastante recheio. Virei cliente!',
-    rating: 4,
+      'Primeira vez que pedi e fiquei muito satisfeita. A pizza estava deliciosa e chegou quentinha, vou pedir mais vezes.',
+    rating: 5,
+  },
+  {
+    id: 4,
+    customerName: 'Fabiola',
+    comment: 'Saborosa, quentinha, valor legal. RECOMENDO.',
+    rating: 5,
+  },
+  {
+    id: 5,
+    customerName: 'Henrique',
+    comment: 'Rapido e de qualidade muito boa',
+    rating: 5,
+  },
+  {
+    id: 6,
+    customerName: 'Dânia',
+    comment: 'Sempre ótimo',
+    rating: 3,
   },
 ];
 
