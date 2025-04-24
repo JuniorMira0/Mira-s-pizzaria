@@ -21,7 +21,6 @@ O Pizza Vista Web é uma aplicação front-end que apresenta informações sobre
 - **Componentes UI:** shadcn/ui (utilizando Radix UI)
 - **Roteamento:** React Router DOM
 - **Carrossel:** Embla Carousel React + Autoplay
-- **Formulários:** React Hook Form + Formspree
 - **Linting:** ESLint
 
 ## Começando
