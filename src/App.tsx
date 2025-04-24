@@ -12,6 +12,10 @@ const SobrePage = lazy(() => import('./pages/Sobre'));
 const ContatoPage = lazy(() => import('./pages/Contato'));
 const DeliveryPage = lazy(() => import('./pages/Delivery'));
 const NotFoundPage = lazy(() => import('./pages/NotFound'));
+const PoliticaPrivacidadePage = lazy(
+  () => import('./pages/PoliticaPrivacidade'),
+);
+const TermosServicoPage = lazy(() => import('./pages/TermosServico'));
 
 const queryClient = new QueryClient();
 
@@ -36,6 +40,11 @@ const App = () => (
                 <Route path="/sobre" element={<SobrePage />} />
                 <Route path="/contato" element={<ContatoPage />} />
                 <Route path="/delivery" element={<DeliveryPage />} />
+                <Route
+                  path="/politica-privacidade"
+                  element={<PoliticaPrivacidadePage />}
+                />
+                <Route path="/termos-servico" element={<TermosServicoPage />} />
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>
             </Suspense>

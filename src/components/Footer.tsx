@@ -85,12 +85,18 @@ const Footer: React.FC = () => {
             <nav className="flex flex-col space-y-1.5">
               <Link
                 to="/politica-privacidade"
+                onClick={scrollToTop}
+                aria-label="Política de Privacidade"
+                rel="noopener noreferrer"
                 className="hover:text-white hover:underline"
               >
                 Política de Privacidade
               </Link>
               <Link
                 to="/termos-servico"
+                onClick={scrollToTop}
+                aria-label="Termos de Serviço"
+                rel="noopener noreferrer"
                 className="hover:text-white hover:underline"
               >
                 Termos de Serviço
