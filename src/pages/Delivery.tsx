@@ -36,7 +36,7 @@ const Delivery = () => {
 
               <div className="flex flex-col md:flex-row md:justify-center items-center space-y-6 md:space-y-0 md:space-x-6 mb-10">
                 <a
-                  href="https://pedido.anota.ai/loja/pizzaria-detroit-santa-quiteria?f=ms"
+                  href="https://pedido.anota.ai/loja/mira's-pizzaria?f=ms"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center space-x-3 bg-[#ea1d2c] text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-[#d41924] transition-colors w-full md:w-auto"

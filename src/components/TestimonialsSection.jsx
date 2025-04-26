@@ -46,7 +46,7 @@ const testimonials = [
     id: 6,
     customerName: 'Dânia',
     comment: 'Sempre ótimo',
-    rating: 3,
+    rating: 5,
   },
 ];
 
