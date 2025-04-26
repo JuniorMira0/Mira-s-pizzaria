@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 const Delivery = () => {
   const whatsappNumber = '554130144656';
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Olá! Gostaria de fazer um pedido.`;
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Olá! Vim do site e gostaria de fazer um pedido.`;
 
   return (
     <>

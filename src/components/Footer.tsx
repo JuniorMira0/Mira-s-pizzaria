@@ -5,7 +5,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   const whatsappNumber = '554130144656';
-  const whatsappLink = `https://wa.me/${whatsappNumber}`;
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Olá! Vim do site e gostaria de fazer um pedido.`;
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
