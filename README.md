@@ -1,8 +1,8 @@
 # Mira's Pizzaria - Website Oficial
 
-![Mira's Logo](URL_PARA_O_LOGO_DA_MIRAS_SE_TIVER) Bem-vindo ao repositório do código-fonte do website oficial da Mira's Pizzaria, localizada em Santa Quitéria, Curitiba-PR. Este site serve como a presença online da pizzaria, fornecendo informações, opções de pedido e formas de contato.
+![Mira's Logo](./images/miras-logo-preview.webp) Bem-vindo ao repositório do código-fonte do website oficial da Mira's Pizzaria, localizada em Santa Quitéria, Curitiba-PR. Este site serve como a presença online da pizzaria, fornecendo informações, opções de pedido e formas de contato.
 
-**[[Link para o site ao vivo](https://miraspizzaria.netlify.app/)]** (Adicione o link quando estiver online)
+**[[Link para o site ao vivo](https://miraspizzaria.com.br/)]**
 
 ## ✨ Funcionalidades# Pizza Vista Web
 
@@ -48,5 +48,6 @@ Siga estas instruções para obter uma cópia do projeto rodando na sua máquina
 
 Para iniciar o servidor de desenvolvimento:
 
-````bash
+```bash
 npm run dev
+```
