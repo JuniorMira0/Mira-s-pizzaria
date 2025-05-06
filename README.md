@@ -4,7 +4,7 @@
 
 **[[Link para o site ao vivo](https://miraspizzaria.com.br/)]**
 
-## ✨ Funcionalidades# Pizza Vista Web
+## ✨ Funcionalidades# Mira's Pizzaria
 
 Este é um projeto web para a pizzaria Mira's, desenvolvido com React, Vite, TypeScript e Tailwind CSS.
 
@@ -37,7 +37,7 @@ Siga estas instruções para obter uma cópia do projeto rodando na sua máquina
 1.  Clone o repositório:
     ```bash
     git clone git@github.com:JuniorMira0/Mira-s-pizzaria.git
-    cd pizza-vista-web
+    cd mira-s-pizzaria
     ```
 2.  Instale as dependências do projeto:
     ```bash

@@ -11,8 +11,7 @@ import { useIsMobile } from '@/hooks/use-mobile';
 const MenuSection = () => {
   const isMobile = useIsMobile();
 
-  const deliveryLink =
-    'https://pedido.anota.ai/loja/pizzaria-detroit-santa-quiteria?f=ms';
+  const deliveryLink = "https://pedido.anota.ai/loja/mira's-pizzaria?f=ms";
 
   const menuItems = [
     {
