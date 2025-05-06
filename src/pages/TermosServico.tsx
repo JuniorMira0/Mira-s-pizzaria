@@ -140,8 +140,7 @@ const TermosServico: React.FC = () => {
             Em nenhuma circunstância a Miras Pizzaria LTDA será responsável por
             quaisquer danos indiretos, incidentais, especiais, consequenciais ou
             punitivos resultantes do seu acesso ou uso ou incapacidade de
-            acessar ou usar o Site. [Consultar advogado para redação final desta
-            cláusula].
+            acessar ou usar o Site.
           </p>
 
           <h2 className="text-2xl font-semibold mt-6 mb-3">

@@ -58,7 +58,9 @@ const PoliticaPrivacidade: React.FC = () => {
               manter o site funcionando, garantir sua segurança e analisar como
               ele é usado para podermos melhorá-lo. Essas informações podem ser
               coletadas através de registros do servidor ou ferramentas de
-              análise (como Google Analytics, se utilizado).
+              análise (como Google Analytics, se utilizado). Ao utilizar nosso
+              site, você concorda com a coleta e uso dessas informações
+              conforme descrito.
             </li>
             <li>
               <strong>Cookies:</strong> Podemos usar cookies essenciais para o
@@ -66,8 +68,7 @@ const PoliticaPrivacidade: React.FC = () => {
               entender melhor o tráfego. Cookies são pequenos arquivos
               armazenados no seu dispositivo. Você geralmente pode instruir seu
               navegador a recusar todos os cookies ou a indicar quando um cookie
-              está sendo enviado. [Se usar cookies não essenciais, considere um
-              banner de consentimento].
+              está sendo enviado.
             </li>
           </ul>
 
