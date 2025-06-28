@@ -42,7 +42,7 @@ const Delivery = () => {
                   className="flex items-center justify-center space-x-3 bg-[#ea1d2c] text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-[#d41924] transition-colors w-full md:w-auto"
                 >
                   <FaLaptop className="text-xl" />
-                  <span>Pedir pelo Site</span>
+                  <span>Pedir Online</span>
                 </a>
 
                 <a

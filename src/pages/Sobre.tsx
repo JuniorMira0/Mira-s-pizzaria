@@ -99,7 +99,7 @@ const Sobre = () => {
                 a pizza perfeita esperando por você.
               </p>
               <a
-                href="https://pedido.anota.ai/loja/pizzaria-detroit-santa-quiteria?f=msg"
+                href="https://pedido.anota.ai/loja/mira's-pizzaria?f=ms"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-white text-red-700 font-bold py-3 px-8 rounded-md shadow-md hover:bg-gray-100 transition duration-300"
