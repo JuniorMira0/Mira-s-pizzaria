@@ -1,18 +1,15 @@
-import { Helmet } from 'react-helmet-async';
+import SEO from '@/components/SEO';
+import { LINKS, BUSINESS_INFO } from '@/constants';
 
 const Sobre = () => {
   return (
     <>
-      <Helmet>
-        <title>
-          Sobre Nós | Mira's Pizzaria - Tradição e Sabor em Curitiba
-        </title>
-        <meta
-          name="description"
-          content="Descubra a história e a paixão da Mira's Pizzaria por ingredientes frescos e pizzas artesanais. Localizada em Santa Quitéria, Curitiba, desde 2022."
-        />
-        <link rel="canonical" href="https://miraspizzaria.com.br/sobre" />
-      </Helmet>
+      <SEO
+        title="Sobre Nós - Tradição e Sabor em Curitiba"
+        description={`Descubra a história e a paixão da ${BUSINESS_INFO.name} por ingredientes frescos e pizzas artesanais. Localizada em Santa Quitéria, Curitiba, desde ${BUSINESS_INFO.foundedYear}.`}
+        canonical="/sobre"
+        keywords="sobre, história, pizzaria, Santa Quitéria, Curitiba, ingredientes frescos, pizzas artesanais"
+      />
 
       <div className="min-h-screen bg-gray-50">
         <div className="relative h-64 md:h-96 w-full">
@@ -36,9 +33,10 @@ const Sobre = () => {
                   Nossa Paixão por Pizza
                 </h2>
                 <p className="text-lg text-gray-700 mb-4">
-                  Bem-vindo à Mira's Pizzaria! Desde 2022, somos dedicados a
-                  oferecer as melhores pizzas da região, combinando receitas
-                  tradicionais com um toque de criatividade.
+                  Bem-vindo à {BUSINESS_INFO.name}! Desde{' '}
+                  {BUSINESS_INFO.foundedYear}, somos dedicados a oferecer as
+                  melhores pizzas da região, combinando receitas tradicionais
+                  com um toque de criatividade.
                 </p>
                 <p className="text-lg text-gray-700">
                   Nossa história é construída sobre a base de ingredientes
@@ -99,7 +97,7 @@ const Sobre = () => {
                 a pizza perfeita esperando por você.
               </p>
               <a
-                href="https://pedido.anota.ai/loja/mira's-pizzaria?f=ms"
+                href={LINKS.orderOnline}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-white text-red-700 font-bold py-3 px-8 rounded-md shadow-md hover:bg-gray-100 transition duration-300"

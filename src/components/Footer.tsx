@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaWhatsapp } from 'react-icons/fa';
+import { LINKS, BUSINESS_INFO } from '@/constants';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  const whatsappNumber = '554130144656';
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Olá! Vim do site e gostaria de fazer um pedido.`;
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -53,7 +52,7 @@ const Footer: React.FC = () => {
               <p>Santa Quitéria, Curitiba - PR</p>
               <p>CEP: 80310-420</p>
               <a
-                href={whatsappLink}
+                href={LINKS.whatsappOrder}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 pt-1 hover:text-white"

@@ -1,22 +1,17 @@
 import { FaWhatsapp, FaPhoneAlt, FaLaptop } from 'react-icons/fa';
-import { Helmet } from 'react-helmet-async';
+import SEO from '@/components/SEO';
+import { CONTACT_INFO, LINKS } from '@/constants';
+import ActionButton from '@/components/ui/ActionButton';
 
 const Delivery = () => {
-  const whatsappNumber = '554130144656';
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Olá! Vim do site e gostaria de fazer um pedido.`;
-
   return (
     <>
-      <Helmet>
-        <title>
-          Delivery de Pizza em Curitiba (Santa Quitéria) | Mira's Pizzaria
-        </title>
-        <meta
-          name="description"
-          content="Peça sua pizza artesanal favorita da Mira's Pizzaria pelo site, telefone ou WhatsApp! Delivery rápido em Santa Quitéria e região. Aberto todos os dias!"
-        />
-        <link rel="canonical" href="https://miraspizzaria.com.br/delivery" />
-      </Helmet>
+      <SEO
+        title="Delivery de Pizza em Curitiba (Santa Quitéria)"
+        description="Peça sua pizza artesanal favorita da Mira's Pizzaria pelo site, telefone ou WhatsApp! Delivery rápido em Santa Quitéria e região. Aberto todos os dias!"
+        canonical="/delivery"
+        keywords="delivery, pizza, entrega, Santa Quitéria, Curitiba, WhatsApp, online"
+      />
 
       <div className="min-h-screen bg-gray-50">
         <div className="pt-24 pb-16 px-6">
@@ -35,33 +30,27 @@ const Delivery = () => {
               </h2>
 
               <div className="flex flex-col md:flex-row md:justify-center items-center space-y-6 md:space-y-0 md:space-x-6 mb-10">
-                <a
-                  href="https://pedido.anota.ai/loja/mira's-pizzaria?f=ms"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center space-x-3 bg-[#ea1d2c] text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-[#d41924] transition-colors w-full md:w-auto"
-                >
-                  <FaLaptop className="text-xl" />
-                  <span>Pedir Online</span>
-                </a>
+                <ActionButton
+                  href={LINKS.orderOnline}
+                  icon={FaLaptop}
+                  text="Pedir Online"
+                  variant="primary"
+                />
 
-                <a
-                  href="tel:4130144656"
-                  className="flex items-center justify-center space-x-3 bg-gray-700 text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-gray-900 transition-colors w-full md:w-auto"
-                >
-                  <FaPhoneAlt className="text-xl" />
-                  <span>Ligar: 41 3014-4656</span>
-                </a>
+                <ActionButton
+                  href={LINKS.phoneCall}
+                  icon={FaPhoneAlt}
+                  text={`Ligar: ${CONTACT_INFO.phoneFormatted}`}
+                  variant="secondary"
+                  external={false}
+                />
 
-                <a
-                  href={whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center space-x-3 bg-[#25D366] text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-[#128C7E] transition-colors w-full md:w-auto"
-                >
-                  <FaWhatsapp className="text-xl" />
-                  <span>Pedir pelo WhatsApp</span>
-                </a>
+                <ActionButton
+                  href={LINKS.whatsappOrder}
+                  icon={FaWhatsapp}
+                  text="Pedir pelo WhatsApp"
+                  variant="whatsapp"
+                />
               </div>
             </div>
 
