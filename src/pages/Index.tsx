@@ -2,33 +2,57 @@ import PromotionalCarousel from '@/components/PromotionalCarousel';
 import MenuSection from '@/components/MenuSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import LocationMap from '@/components/LocationMap';
+import SEO from '@/components/SEO';
 import { Helmet } from 'react-helmet-async';
+import {
+  createBreadcrumbSchema,
+  createWebPageSchema,
+  organizationSchema,
+  restaurantSchema,
+  websiteSchema,
+} from '@/lib/seo';
+
+const homeDescription =
+  'Pizzaria em Curitiba (Santa Quitéria) com pizzas artesanais, ingredientes frescos e delivery rápido todos os dias.';
+
+const homeStructuredData = [
+  websiteSchema,
+  organizationSchema,
+  restaurantSchema,
+  createWebPageSchema(
+    "Mira's Pizzaria - Delivery de Pizzas Artesanais em Curitiba",
+    homeDescription,
+    '/',
+  ),
+  createBreadcrumbSchema([{ name: 'Inicio', path: '/' }]),
+];
 
 const Index = () => {
   return (
     <>
+      <SEO
+        title="Mira's Pizzaria - Delivery de Pizzas Artesanais em Curitiba"
+        description={homeDescription}
+        canonical="/"
+        keywords="pizzaria curitiba, pizza artesanal, delivery santa quiteria, pedir pizza online, miras pizzaria"
+        ogImage="/images/1.png"
+        structuredData={homeStructuredData}
+      />
+
       <Helmet>
-        <title>
-          Mira's Pizzaria - Delivery de Pizzas Artesanais em Curitiba
-        </title>
-        <meta
-          name="description"
-          content="Peça as melhores pizzas artesanais de Curitiba (Santa Quitéria) com ingredientes frescos! Delivery rápido. Consulte nosso cardápio e peça já!"
-        />
-        <link rel="canonical" href="https://miraspizzaria.com.br/" />
         <link
           rel="preload"
           fetchPriority="high"
           as="image"
-          href="/images/Banner1.webp"
-          type="image/webp"
+          href="/images/1.png"
+          type="image/png"
         />
         <link
           rel="preload"
           fetchPriority="high"
           as="image"
-          href="/images/Banner1-mobile.webp"
-          type="image/webp"
+          href="/images/Banner1-mobile.png"
+          type="image/png"
         />
         <link
           rel="preload"

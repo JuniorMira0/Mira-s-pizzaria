@@ -1,17 +1,32 @@
 // src/pages/PoliticaPrivacidade.tsx
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '@/components/SEO';
+import { createBreadcrumbSchema, createWebPageSchema } from '@/lib/seo';
 
 const PoliticaPrivacidade: React.FC = () => {
+  const description =
+    'Conheça a política de privacidade da Mira\'s Pizzaria e como tratamos dados pessoais em conformidade com a LGPD.';
+
+  const structuredData = [
+    createWebPageSchema(
+      'Politica de Privacidade - Mira\'s Pizzaria',
+      description,
+      '/politica-privacidade',
+    ),
+    createBreadcrumbSchema([
+      { name: 'Inicio', path: '/' },
+      { name: 'Politica de Privacidade', path: '/politica-privacidade' },
+    ]),
+  ];
+
   return (
     <>
-      <Helmet>
-        <title>Política de Privacidade - Miras Pizzaria</title>
-        <meta
-          name="description"
-          content="Conheça a política de privacidade simplificada da Miras Pizzaria."
-        />
-      </Helmet>
+      <SEO
+        title="Política de Privacidade"
+        description={description}
+        canonical="/politica-privacidade"
+        structuredData={structuredData}
+      />
 
       <div className="container mx-auto px-6 pb-12 pt-20 max-w-4xl">
         <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">

@@ -1,17 +1,14 @@
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEO from '@/components/SEO';
 
 const NotFound = () => {
   return (
     <>
-      <Helmet>
-        <title>Página Não Encontrada | Mira's Pizzaria</title>
-        <meta
-          name="description"
-          content="Oops! A página que você procurou não foi encontrada no site da Mira's Pizzaria. Volte para a página inicial."
-        />
-        <meta name="robots" content="noindex" />
-      </Helmet>
+      <SEO
+        title="Página não encontrada"
+        description="A página que você procurou não foi encontrada no site da Mira's Pizzaria."
+        noindex
+      />
 
       <div className="min-h-screen">
         <div className="flex items-center justify-center min-h-screen bg-gray-100 pt-20">

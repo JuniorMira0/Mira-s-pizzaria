@@ -1,14 +1,32 @@
 import SEO from '@/components/SEO';
 import { LINKS, BUSINESS_INFO } from '@/constants';
+import {
+  createBreadcrumbSchema,
+  createWebPageSchema,
+  organizationSchema,
+} from '@/lib/seo';
 
 const Sobre = () => {
+  const description = `Descubra a história e a paixão da ${BUSINESS_INFO.name} por ingredientes frescos e pizzas artesanais. Localizada em Santa Quitéria, Curitiba, desde ${BUSINESS_INFO.foundedYear}.`;
+
+  const structuredData = [
+    organizationSchema,
+    createWebPageSchema('Sobre a Mira\'s Pizzaria', description, '/sobre'),
+    createBreadcrumbSchema([
+      { name: 'Inicio', path: '/' },
+      { name: 'Sobre', path: '/sobre' },
+    ]),
+  ];
+
   return (
     <>
       <SEO
         title="Sobre Nós - Tradição e Sabor em Curitiba"
-        description={`Descubra a história e a paixão da ${BUSINESS_INFO.name} por ingredientes frescos e pizzas artesanais. Localizada em Santa Quitéria, Curitiba, desde ${BUSINESS_INFO.foundedYear}.`}
+        description={description}
         canonical="/sobre"
         keywords="sobre, história, pizzaria, Santa Quitéria, Curitiba, ingredientes frescos, pizzas artesanais"
+        ogImage="/images/pizza-margherita.webp"
+        structuredData={structuredData}
       />
 
       <div className="min-h-screen bg-gray-50">

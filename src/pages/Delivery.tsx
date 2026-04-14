@@ -2,15 +2,34 @@ import { FaWhatsapp, FaPhoneAlt, FaLaptop } from 'react-icons/fa';
 import SEO from '@/components/SEO';
 import { CONTACT_INFO, LINKS } from '@/constants';
 import ActionButton from '@/components/ui/ActionButton';
+import {
+  createBreadcrumbSchema,
+  createWebPageSchema,
+  organizationSchema,
+} from '@/lib/seo';
 
 const Delivery = () => {
+  const description =
+    'Peça sua pizza artesanal favorita da Mira\'s Pizzaria pelo site, telefone ou WhatsApp. Delivery rápido em Santa Quitéria e região.';
+
+  const structuredData = [
+    organizationSchema,
+    createWebPageSchema('Delivery de Pizza em Curitiba', description, '/delivery'),
+    createBreadcrumbSchema([
+      { name: 'Inicio', path: '/' },
+      { name: 'Delivery', path: '/delivery' },
+    ]),
+  ];
+
   return (
     <>
       <SEO
         title="Delivery de Pizza em Curitiba (Santa Quitéria)"
-        description="Peça sua pizza artesanal favorita da Mira's Pizzaria pelo site, telefone ou WhatsApp! Delivery rápido em Santa Quitéria e região. Aberto todos os dias!"
+        description={description}
         canonical="/delivery"
         keywords="delivery, pizza, entrega, Santa Quitéria, Curitiba, WhatsApp, online"
+        ogImage="/images/pizza-pepperoni.webp"
+        structuredData={structuredData}
       />
 
       <div className="min-h-screen bg-gray-50">

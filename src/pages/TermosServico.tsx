@@ -1,17 +1,32 @@
 // src/pages/TermosServico.tsx
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '@/components/SEO';
+import { createBreadcrumbSchema, createWebPageSchema } from '@/lib/seo';
 
 const TermosServico: React.FC = () => {
+  const description =
+    'Leia os termos de serviço que regem o uso do site da Mira\'s Pizzaria e os canais de atendimento e delivery.';
+
+  const structuredData = [
+    createWebPageSchema(
+      'Termos de Servico - Mira\'s Pizzaria',
+      description,
+      '/termos-servico',
+    ),
+    createBreadcrumbSchema([
+      { name: 'Inicio', path: '/' },
+      { name: 'Termos de Servico', path: '/termos-servico' },
+    ]),
+  ];
+
   return (
     <>
-      <Helmet>
-        <title>Termos de Serviço - Miras Pizzaria</title>
-        <meta
-          name="description"
-          content="Leia os Termos de Serviço que regem o uso do site da Miras Pizzaria."
-        />
-      </Helmet>
+      <SEO
+        title="Termos de Serviço"
+        description={description}
+        canonical="/termos-servico"
+        structuredData={structuredData}
+      />
 
       <div className="container mx-auto px-6 pb-12 pt-20 max-w-4xl">
         <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">

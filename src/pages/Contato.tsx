@@ -4,29 +4,65 @@ import {
   FaMapMarkerAlt,
   FaClock,
 } from 'react-icons/fa';
-import { Helmet } from 'react-helmet-async';
 import LocationMap from '@/components/LocationMap';
+import SEO from '@/components/SEO';
+import {
+  createBreadcrumbSchema,
+  createWebPageSchema,
+  organizationSchema,
+} from '@/lib/seo';
 
 const Contato = () => {
   const phoneNumber = '4130144656';
   const whatsappDisplayNumber = '41 3014-4656';
   const whatsappRawNumber = '554130144656';
   const address = 'Joao Alencar Guimaraes 791, Santa Quiteria, Curitiba - PR';
+  const description =
+    'Endereço, telefone, WhatsApp e horário de funcionamento da Mira\'s Pizzaria em Curitiba. Fale conosco e peça seu delivery.';
   const googleMapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
     address,
   )}`;
   const whatsappLink = `https://wa.me/${whatsappRawNumber}?text=Olá! Gostaria de mais informações.`;
+  const contactPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: 'Contato - Mira\'s Pizzaria',
+    url: 'https://miraspizzaria.com.br/contato',
+    mainEntity: {
+      '@type': 'Restaurant',
+      name: "Mira's Pizzaria",
+      telephone: `+${whatsappRawNumber}`,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'R. Joao Alencar Guimaraes, 791',
+        addressLocality: 'Curitiba',
+        addressRegion: 'PR',
+        postalCode: '80310-420',
+        addressCountry: 'BR',
+      },
+    },
+  };
+
+  const structuredData = [
+    organizationSchema,
+    createWebPageSchema('Contato Mira\'s Pizzaria', description, '/contato'),
+    createBreadcrumbSchema([
+      { name: 'Inicio', path: '/' },
+      { name: 'Contato', path: '/contato' },
+    ]),
+    contactPageSchema,
+  ];
 
   return (
     <>
-      <Helmet>
-        <title>Contato e Localização | Mira's Pizzaria (Santa Quitéria)</title>
-        <meta
-          name="description"
-          content="Encontre o endereço, telefone, WhatsApp e horário de funcionamento da Mira's Pizzaria em Santa Quitéria, Curitiba. Venha nos visitar ou peça seu delivery!"
-        />
-        <link rel="canonical" href="https://miraspizzaria.com.br/contato" />
-      </Helmet>
+      <SEO
+        title="Contato e Localização | Mira's Pizzaria"
+        description={description}
+        canonical="/contato"
+        keywords="contato pizzaria curitiba, telefone pizzaria, whatsapp pizzaria, endereco pizzaria santa quiteria"
+        ogImage="/images/2.png"
+        structuredData={structuredData}
+      />
 
       <div className="min-h-screen bg-gray-50">
         <div className="pt-24 pb-16 px-6">
