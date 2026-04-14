@@ -27,9 +27,6 @@ const MenuCard: React.FC<MenuCardProps> = ({ item, href }) => {
         <CardContent className="p-6 flex flex-col flex-grow">
           <h3 className="text-xl font-bold mb-2">{item.name}</h3>
           <p className="text-gray-600 mb-4 flex-grow">{item.description}</p>
-          <p className="text-2xl font-bold text-[#ea1d2c] mt-auto">
-            {item.price}
-          </p>
         </CardContent>
       </Card>
     </a>

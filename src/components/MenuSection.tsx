@@ -1,3 +1,5 @@
+import React from 'react';
+import Autoplay from 'embla-carousel-autoplay';
 import {
   Carousel,
   CarouselContent,
@@ -11,13 +13,23 @@ import MenuCard from '@/components/ui/MenuCard';
 
 const MenuSection = () => {
   const isMobile = useIsMobile();
+  const plugin = React.useRef(
+    Autoplay({ delay: 3500, stopOnInteraction: false })
+  );
 
   return (
     <section className="relative z-20 pt-8 pb-16 -mt-20 bg-gradient-to-b from-white to-gray-100">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">Cardápio</h2>
         {isMobile ? (
-          <Carousel className="w-full">
+          <Carousel
+            className="w-full"
+            opts={{
+              align: 'start',
+              loop: true,
+            }}
+            plugins={[plugin.current]}
+          >
             <CarouselContent>
               {MENU_ITEMS.map((item) => (
                 <CarouselItem

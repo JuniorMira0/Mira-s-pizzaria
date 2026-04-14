@@ -7,67 +7,50 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const PromotionalCarousel = () => {
   const promotions = [
     {
       id: 1,
       title: 'Promo 1',
-      imageDesktop: '/images/Banner1.webp',
-      imageMobile: '/images/Banner1-mobile.webp',
+      imageDesktop: '/images/1.png',
+      imageMobile: '/images/Banner1-mobile.png',
     },
     {
       id: 2,
       title: 'Promo 2',
-      imageDesktop: '/images/Banner5.webp',
-      imageMobile: '/images/Banner5-mobile.webp',
-    },
-    {
-      id: 3,
-      title: 'Promo 3',
-      imageDesktop: '/images/Banner3.webp',
-      imageMobile: '/images/Banner3-mobile.webp',
-    },
-    {
-      id: 4,
-      title: 'Promo 4',
-      imageDesktop: '/images/Banner4.webp',
-      imageMobile: '/images/Banner4-mobile.webp',
-    },
-    {
-      id: 5,
-      title: 'Promo 5',
-      imageDesktop: '/images/Banner2.webp',
-      imageMobile: '/images/Banner2-mobile.webp',
+      imageDesktop: '/images/2.png',
+      imageMobile: '/images/Banner5-mobile.png',
     },
   ];
 
-  const plugin = React.useRef(Autoplay({ delay: 5000 }));
+  const plugin = React.useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: false })
+  );
+  const isMobile = useIsMobile();
 
   return (
     <Carousel
-      className="w-full h-[65vh] md:h-[55vh]"
+      className="w-full"
       opts={{
         align: 'start',
         loop: true,
       }}
-      plugins={[plugin.current]}
+      plugins={isMobile ? [plugin.current] : []}
     >
-      <CarouselContent className="h-full">
+      <CarouselContent className="ml-0">
         {promotions.map((promo) => (
-          <CarouselItem
-            key={promo.id}
-            className="h-full p-0 basis-full overflow-hidden"
-          >
+          <CarouselItem key={promo.id} className="basis-full p-0 pl-0">
             <img
               src={promo.imageDesktop}
               alt={promo.title}
-              className="w-full h-full object-cover hidden md:block"
+              className="hidden md:block w-full h-auto"
             />
             <img
               src={promo.imageMobile}
               alt={promo.title}
-              className="w-full h-full object-cover block md:hidden"
+              className="block md:hidden w-full h-auto"
             />
           </CarouselItem>
         ))}

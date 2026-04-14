@@ -1,4 +1,5 @@
 import React from 'react';
+import Autoplay from 'embla-carousel-autoplay';
 import { Card, CardContent } from '@/components/ui/card';
 import {
   Carousel,
@@ -67,6 +68,9 @@ const StarRating = ({ rating }) => (
 
 const TestimonialsSection = () => {
   const isMobile = useIsMobile();
+  const plugin = React.useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: false })
+  );
 
   return (
     <section className="py-16 bg-gray-50">
@@ -77,7 +81,14 @@ const TestimonialsSection = () => {
         </h2>
 
         {isMobile ? (
-          <Carousel className="w-full max-w-xs sm:max-w-sm mx-auto">
+          <Carousel
+            className="w-full max-w-xs sm:max-w-sm mx-auto"
+            opts={{
+              align: 'start',
+              loop: true,
+            }}
+            plugins={[plugin.current]}
+          >
             {' '}
             <CarouselContent>
               {testimonials.map((item) => (
