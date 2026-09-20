@@ -1,4 +1,5 @@
 import PromotionalCarousel from '@/components/PromotionalCarousel';
+import HighlightsBar from '@/components/HighlightsBar';
 import MenuSection from '@/components/MenuSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import LocationMap from '@/components/LocationMap';
@@ -44,43 +45,34 @@ const Index = () => {
           rel="preload"
           fetchPriority="high"
           as="image"
-          href="/images/1.png"
-          type="image/png"
-        />
-        <link
-          rel="preload"
-          fetchPriority="high"
-          as="image"
-          href="/images/Banner1-mobile.png"
-          type="image/png"
-        />
-        <link
-          rel="preload"
-          fetchPriority="high"
-          as="image"
-          href="/images/pizza-margherita.webp"
-          type="image/webp"
+          href="/images/pizza-real-2.jpeg"
+          type="image/jpeg"
         />
       </Helmet>
 
       <div className="flex flex-col min-h-screen">
         <main className="flex-grow">
-          <section className="relative mt-20 bg-gray-50">
-            <div className="relative z-10 w-full text-white">
-              <PromotionalCarousel />
-            </div>
+          <section className="relative mt-20 overflow-hidden">
+            <PromotionalCarousel />
           </section>
+
+          <HighlightsBar />
 
           <MenuSection />
 
           <TestimonialsSection />
 
-          <section className="bg-white pb-8">
+          <section className="bg-white py-16">
             <div className="max-w-7xl mx-auto px-4">
-              <h2 className="text-4xl font-bold text-center mb-12">
-                Nossa Localização
-              </h2>
-              <div className="rounded-lg overflow-hidden shadow-xl">
+              <div className="text-center mb-12">
+                <span className="text-sm font-bold uppercase tracking-widest text-brand-gold">
+                  Onde estamos
+                </span>
+                <h2 className="text-3xl md:text-4xl font-extrabold mt-2 text-brand-dark">
+                  Nossa localização
+                </h2>
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-xl">
                 <LocationMap />
               </div>
             </div>

@@ -28,7 +28,7 @@ const Delivery = () => {
         description={description}
         canonical="/delivery"
         keywords="delivery, pizza, entrega, Santa Quitéria, Curitiba, WhatsApp, online"
-        ogImage="/images/pizza-pepperoni.webp"
+        ogImage="/images/pizza-real-margherita.webp"
         structuredData={structuredData}
       />
 

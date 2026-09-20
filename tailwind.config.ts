@@ -20,8 +20,16 @@ export default {
 		extend: {
 			fontFamily: {
         huglove: ['Huglove', 'cursive'],
+        sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
 			colors: {
+				brand: {
+					red: '#ea1d2c',
+					'red-dark': '#c4141f',
+					dark: '#181310',
+					cream: '#fdf6ec',
+					gold: '#f4b93a',
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
