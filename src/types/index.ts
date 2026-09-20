@@ -4,7 +4,9 @@ export interface MenuItem {
   name: string;
   description: string;
   price: string;
-  image: string;
+  image?: string;
+  imagePosition?: string;
+  imageZoom?: string;
   category: string;
 }
 

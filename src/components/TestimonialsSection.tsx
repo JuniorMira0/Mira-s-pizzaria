@@ -56,7 +56,9 @@ const StarRating = ({ rating }) => (
     {[...Array(5)].map((_, i) => (
       <svg
         key={i}
-        className={`w-5 h-5 ${i < rating ? 'fill-current' : 'text-gray-300'}`}
+        className={`w-5 h-5 ${
+          i < rating ? 'fill-brand-gold text-brand-gold' : 'text-gray-300'
+        }`}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
       >
@@ -73,12 +75,16 @@ const TestimonialsSection = () => {
   );
 
   return (
-    <section className="py-16 bg-gray-50">
-      {' '}
+    <section className="py-16 bg-brand-dark">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">
-          O que nossos clientes dizem
-        </h2>
+        <div className="text-center mb-12">
+          <span className="text-sm font-bold uppercase tracking-widest text-brand-gold">
+            Depoimentos
+          </span>
+          <h2 className="text-3xl md:text-4xl font-extrabold mt-2 text-white">
+            O que nossos clientes dizem
+          </h2>
+        </div>
 
         {isMobile ? (
           <Carousel
@@ -93,13 +99,13 @@ const TestimonialsSection = () => {
             <CarouselContent>
               {testimonials.map((item) => (
                 <CarouselItem key={item.id}>
-                  <Card className="text-center h-full">
+                  <Card className="text-center h-full bg-white">
                     <CardContent className="p-6 flex flex-col items-center justify-center">
                       <p className="text-gray-600 italic mb-4">
                         "{item.comment}"
                       </p>
                       <StarRating rating={item.rating} />
-                      <h3 className="text-lg font-semibold mt-3">
+                      <h3 className="text-lg font-semibold mt-3 text-brand-dark">
                         {item.customerName}
                       </h3>
                     </CardContent>
@@ -107,17 +113,17 @@ const TestimonialsSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-[-50px] top-1/2 -translate-y-1/2" />{' '}
-            <CarouselNext className="absolute right-[-50px] top-1/2 -translate-y-1/2" />{' '}
+            <CarouselPrevious className="absolute left-[-50px] top-1/2 -translate-y-1/2 border-none bg-white/10 text-white hover:bg-white/20" />{' '}
+            <CarouselNext className="absolute right-[-50px] top-1/2 -translate-y-1/2 border-none bg-white/10 text-white hover:bg-white/20" />{' '}
           </Carousel>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((item) => (
-              <Card key={item.id} className="text-center">
+              <Card key={item.id} className="text-center bg-white">
                 <CardContent className="p-6 flex flex-col items-center justify-center">
                   <p className="text-gray-600 italic mb-4">"{item.comment}"</p>
                   <StarRating rating={item.rating} />
-                  <h3 className="text-lg font-semibold mt-3">
+                  <h3 className="text-lg font-semibold mt-3 text-brand-dark">
                     {item.customerName}
                   </h3>
                 </CardContent>

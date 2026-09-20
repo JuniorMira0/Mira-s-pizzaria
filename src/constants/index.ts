@@ -32,7 +32,8 @@ export const MENU_ITEMS = [
     name: 'Pizza Margherita',
     description: 'Delicioso molho de tomate, mussarela, tomates em rodelas, manjericão fresco e oregano',
     price: 'R$ 45,00',
-    image: '/images/pizza-margherita.webp',
+    image: '/images/pizza-real-margherita.webp',
+    imagePosition: '25% 72%',
     category: 'pizza'
   },
   {
@@ -40,7 +41,6 @@ export const MENU_ITEMS = [
     name: 'Pizza Pepperoni',
     description: 'Delicioso molho de tomate, mussarela, pepperone e orégano',
     price: 'R$ 48,00',
-    image: '/images/pizza-pepperoni.webp',
     category: 'pizza'
   },
   {
@@ -48,7 +48,6 @@ export const MENU_ITEMS = [
     name: 'Pizza 4 Queijos',
     description: 'Delicioso molho de tomate, mussarela, requeijão cremoso, provolone, gorgonzola e orégano',
     price: 'R$ 48,00',
-    image: '/images/pizza-4-queijos.webp',
     category: 'pizza'
   },
   {
@@ -56,7 +55,6 @@ export const MENU_ITEMS = [
     name: 'Pizza Portuguesa',
     description: 'Delicioso molho de tomate, mussarela, presunto, ovos, cebola azeitona e orégano',
     price: 'R$ 45,00',
-    image: '/images/pizza-portuguesa.webp',
     category: 'pizza'
   }
 ] as const;

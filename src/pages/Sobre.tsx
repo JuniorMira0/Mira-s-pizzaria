@@ -25,7 +25,7 @@ const Sobre = () => {
         description={description}
         canonical="/sobre"
         keywords="sobre, história, pizzaria, Santa Quitéria, Curitiba, ingredientes frescos, pizzas artesanais"
-        ogImage="/images/pizza-margherita.webp"
+        ogImage="/images/pizza-real-margherita.webp"
         structuredData={structuredData}
       />
 
@@ -64,9 +64,10 @@ const Sobre = () => {
               </div>
               <div>
                 <img
-                  src="/images/pizza-margherita.webp"
+                  src="/images/pizza-real-margherita.webp"
                   alt="Pizza Margherita deliciosa da Mira's"
                   className="rounded-lg shadow-lg w-full max-h-80 object-cover h-auto"
+                  style={{ objectPosition: '25% 72%' }}
                 />
               </div>
             </section>

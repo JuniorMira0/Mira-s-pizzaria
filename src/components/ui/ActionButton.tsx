@@ -19,12 +19,12 @@ const ActionButton: React.FC<ActionButtonProps> = ({
   external = true,
 }) => {
   const baseClasses =
-    'flex items-center justify-center space-x-3 px-8 py-4 rounded-lg text-lg font-medium transition-colors w-full md:w-auto';
+    'flex items-center justify-center space-x-3 px-8 py-4 rounded-full text-lg font-semibold transition-colors w-full md:w-auto';
 
   const variantClasses = {
-    primary: 'bg-[#ea1d2c] text-white hover:bg-[#d41924]',
-    secondary: 'bg-gray-700 text-white hover:bg-gray-900',
-    whatsapp: 'bg-green-500 text-white hover:bg-green-600',
+    primary: 'bg-brand-red text-white hover:bg-brand-red-dark',
+    secondary: 'bg-brand-dark text-white hover:bg-black',
+    whatsapp: 'bg-[#25D366] text-white hover:bg-[#1ebe57]',
   };
 
   const combinedClasses = `${baseClasses} ${variantClasses[variant]} ${className}`;

@@ -11,11 +11,33 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-gray-400 mt-auto">
+    <footer className="bg-brand-dark text-gray-400 mt-auto">
+      <div className="border-b border-white/10">
+        <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+          <div>
+            <p className="text-xl font-extrabold text-white">
+              Com fome? Peça agora mesmo!
+            </p>
+            <p className="text-sm text-gray-400">
+              Entrega rápida em Santa Quitéria e região.
+            </p>
+          </div>
+          <a
+            href={LINKS.whatsappOrder}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-red px-6 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-sm transition-colors hover:bg-brand-red-dark"
+          >
+            <FaWhatsapp size={18} />
+            Peça pelo WhatsApp
+          </a>
+        </div>
+      </div>
+
       <div className="container mx-auto px-4 py-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6 text-sm">
           <div>
-            <h3 className="text-base font-semibold text-white mb-3">
+            <h3 className="text-base font-semibold text-brand-gold mb-3">
               Navegação
             </h3>
             <nav className="flex flex-col space-y-1.5">
@@ -44,7 +66,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h3 className="text-base font-semibold text-white mb-3">
+            <h3 className="text-base font-semibold text-brand-gold mb-3">
               Onde Estamos
             </h3>
             <address className="not-italic space-y-1.5">
@@ -65,7 +87,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h3 className="text-base font-semibold text-white mb-3">
+            <h3 className="text-base font-semibold text-brand-gold mb-3">
               Siga-nos
             </h3>
             <nav className="flex flex-col space-y-1.5">
@@ -78,7 +100,7 @@ const Footer: React.FC = () => {
                 Instagram
               </a>
             </nav>
-            <h3 className="text-base font-semibold text-white mt-4 mb-3">
+            <h3 className="text-base font-semibold text-brand-gold mt-4 mb-3">
               Legal
             </h3>
             <nav className="flex flex-col space-y-1.5">
@@ -104,13 +126,21 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <hr className="border-gray-700 my-4" />
+        <hr className="border-white/10 my-4" />
 
         <div className="flex flex-col md:flex-row justify-between items-center text-xs">
-          <div className="text-center md:text-left mb-3 md:mb-0">
-            <p>&copy; {currentYear} Miras Pizzaria LTDA.</p>
-            <p>CNPJ: 13.650.975/0001-07</p>
-            <p>Todos os direitos reservados.</p>
+          <div className="flex items-center gap-3 text-center md:text-left mb-3 md:mb-0">
+            <img
+              src="/images/miras-logo.png"
+              alt=""
+              aria-hidden="true"
+              className="h-12 w-auto shrink-0"
+            />
+            <div>
+              <p>&copy; {currentYear} Miras Pizzaria LTDA.</p>
+              <p>CNPJ: 13.650.975/0001-07</p>
+              <p>Todos os direitos reservados.</p>
+            </div>
           </div>
           <div className="text-center md:text-right">
             <p>Desenvolvido por Junior Mira</p>

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { LINKS } from '@/constants';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -27,20 +28,20 @@ const Navbar = () => {
   }, []);
 
   const baseNavbarClasses =
-    'py-4 px-6 fixed w-full top-0 z-50 transition-all duration-300';
-  const scrolledNavbarClasses = 'bg-white/60 backdrop-blur-lg shadow-md';
+    'py-3 px-6 fixed w-full top-0 z-50 transition-all duration-300';
+  const scrolledNavbarClasses = 'bg-white/85 backdrop-blur-lg shadow-md';
   const mobileOpenNavbarClasses = !scrolled ? 'bg-white shadow-sm' : '';
   const navbarClasses = `${baseNavbarClasses} ${
     scrolled
       ? scrolledNavbarClasses
       : isMobileMenuOpen
       ? mobileOpenNavbarClasses
-      : 'bg-white shadow-sm'
+      : 'bg-white/95 backdrop-blur-sm shadow-sm'
   }`;
 
   const linkBaseClasses =
-    'relative block md:inline-block py-2 md:py-0 uppercase text-xs tracking-tight font-medium text-black opacity-90 transition-colors duration-300';
-  const linkHoverClasses = 'hover:text-[#ea1d2c] hover:opacity-100';
+    'relative block md:inline-block py-2 md:py-0 uppercase text-xs tracking-wide font-semibold text-brand-dark opacity-80 transition-colors duration-300';
+  const linkHoverClasses = 'hover:text-brand-red hover:opacity-100';
   const linkClasses = `${linkBaseClasses} ${linkHoverClasses}`;
 
   const toggleMobileMenu = () => {
@@ -57,15 +58,26 @@ const Navbar = () => {
         <Link
           to="/"
           onClick={scrollToTop}
-          className="text-5xl font-huglove text-black"
+          className="text-5xl font-huglove text-brand-dark shrink-0"
         >
           <span>Mira</span>
-          <span className="text-[#ea1d2c]">'</span>
+          <span className="text-brand-red">'</span>
           <span>s.</span>
         </Link>
-        <div className="md:hidden pr-4">
-          {' '}
-          <button onClick={toggleMobileMenu} aria-label="Toggle menu">
+        <div className="flex items-center gap-3 md:hidden">
+          <a
+            href={LINKS.whatsappOrder}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-brand-red px-4 py-2 text-xs font-bold uppercase tracking-wide text-white shadow-sm transition-colors hover:bg-brand-red-dark"
+          >
+            Peça já
+          </a>
+          <button
+            onClick={toggleMobileMenu}
+            aria-label="Abrir menu"
+            className="text-brand-dark"
+          >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -128,6 +140,15 @@ const Navbar = () => {
             {' '}
             CONTATO
           </Link>
+          <a
+            href={LINKS.whatsappOrder}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:inline-block rounded-full bg-brand-red px-5 py-2 text-xs font-bold uppercase tracking-wide text-white shadow-sm transition-colors hover:bg-brand-red-dark"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Peça já
+          </a>
         </div>
       </div>
     </nav>

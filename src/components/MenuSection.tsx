@@ -18,9 +18,23 @@ const MenuSection = () => {
   );
 
   return (
-    <section className="relative z-20 pt-8 pb-16 -mt-20 bg-gradient-to-b from-white to-gray-100">
+    <section
+      id="cardapio"
+      className="relative z-20 pt-14 pb-16 -mt-6 bg-gradient-to-b from-brand-cream to-white rounded-t-[2.5rem] shadow-[0_-12px_30px_-15px_rgba(0,0,0,0.15)] scroll-mt-20"
+    >
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">Cardápio</h2>
+        <div className="text-center mb-12">
+          <span className="text-sm font-bold uppercase tracking-widest text-brand-gold">
+            Cardápio
+          </span>
+          <h2 className="text-3xl md:text-4xl font-extrabold mt-2 text-brand-dark">
+            As favoritas da casa
+          </h2>
+          <p className="text-muted-foreground mt-2 max-w-xl mx-auto">
+            Massa artesanal, ingredientes frescos e aquele sabor de família em
+            cada fatia.
+          </p>
+        </div>
         {isMobile ? (
           <Carousel
             className="w-full"
